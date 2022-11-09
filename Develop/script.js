@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
 
   var userInput = window.prompt("Password Lenght")
-//
+
   var pasLenght = parseInt(userInput)
   if (isNaN(pasLenght)) {
     window.alert("That is not a number! Try again!");
@@ -25,7 +25,30 @@ function generatePassword(){
   var numberList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
   var specialList = [ "!","#", "$", "%", "&", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~", ]
 
-  console.log
+  var allOptions = []
+
+  if (userLower) {
+    allOptions.push (lowerList)
+  }
+
+  if (userUpper) {
+    allOptions.push (upperList)
+  }
+
+  if (userNumbers) {
+    allOptions.push (numberList)
+  }
+
+  if (userSpecial) {
+    allOptions.push (specialList)
+  }
+
+  var passwordGenerator = ""
+  
+  for (var i=0; i<pasLenght; i++){
+    
+  }
+
 }
 
 
