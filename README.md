@@ -19,12 +19,12 @@ https://liliaungurean.github.io/Password-Generator/
 ## Usage
 
 When the user opens the page they will be prompted with a red button, saying “password generator”. Once they click that they are prompted with the window, asking to choose the length of the password between eight and 128 characters. After they have made their selections, they are prompted with another window asking if they want lowercase letters given the choice of yes or cancel(no). After that additional windows will pop up and users will be prompted to answer yes or no (cancel) to whether they want capital letters, special characters and numbers. Once that is all completed the user will be presented with a generated password.
-[generate Password button](assets/Images/red%20button.png)
-[first window asking for the lenght](assets/Images/lower.png)
-[next window asking if yes to upper case](assets/Images/upper.png)
-[next window asking if yes to numbers](assets/Images/numers.png)
-[next window asking if yes to special characters](assets/Images/char.png)
-[generated password](assets/Images/final.png)
+![generate Password button](assets/Images/red%20button.png)
+![first window asking for the lenght](assets/Images/lower.png)
+![next window asking if yes to upper case](assets/Images/upper.png)
+![next window asking if yes to numbers](assets/Images/numers.png)
+![next window asking if yes to special characters](assets/Images/char.png)
+![generated password](assets/Images/final.png)
 
 ## Credits
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
