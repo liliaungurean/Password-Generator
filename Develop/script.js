@@ -2,16 +2,21 @@
 var generateBtn = document.querySelector("#generate");
 
 function randomInt(min, max){
-  return Math.floor(Math.random()*(max-min)+min);
+  if (!max) {
+    max-min
+    min-0
+  }
+  var rand = Math.random()
+  return Math.floor(min*(1-rand)+ rand*max);
 }
 
 function getRandomItem (list){
-  return list(randomInt(0, list.length -1))
+  return list[randomInt(0, list.length -1)];
 }
 
 function generatePassword(){
 
-  var userInput = window.prompt("Password Lenght")
+  var userInput = window.prompt("Password Lenght");
 
   var pasLenght = parseInt(userInput)
   if (isNaN(pasLenght)) {
@@ -36,27 +41,35 @@ function generatePassword(){
   var allOptions = []
 
   if (userLower) {
-    allOptions.push (lowerList)
+    allOptions.push (lowerList);
   }
 
   if (userUpper) {
-    allOptions.push (upperList)
+    allOptions.push (upperList);
   }
 
   if (userNumbers) {
-    allOptions.push (numberList)
+    allOptions.push (numberList);
   }
 
   if (userSpecial) {
-    allOptions.push (specialList)
+    allOptions.push (specialList);
+  }
+
+  if (allOptions.length === 0){
+    window.alert("ERROR!! One option must be selected; Try again");
+    return
   }
 
   var passwordGenerator = ""
   
-  for (var i=0; i<pasLenght; i++){
-    var randomItem = getRandomItem(allOptions)
+  for (var i = 0; i < pasLenght; i++){
+    var randomList = getRandomItem(allOptions);
+    var randomChar = getRandomItem(randomList);
+    passwordGenerator += randomChar;
   }
 
+  return passwordGenerator
 }
 
 
